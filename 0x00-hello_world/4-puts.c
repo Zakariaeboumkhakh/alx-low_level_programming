@@ -1,13 +1,10 @@
 #include <stdio.h>
-
 /**
- * main-The main function prints out a string
- *
- * Return: returns 0 always
+ * main - This is the main function
+ * Return: 0
  */
-
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
