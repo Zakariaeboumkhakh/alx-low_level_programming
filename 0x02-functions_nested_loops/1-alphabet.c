@@ -1,15 +1,15 @@
-#include <stdio.h>
-#include "main.h"
+#include"main.h"
 
 /**
-* print_alphapet - prints alphabets in lowercase
-*/
+ * print_alphabet - utilizes on the _putchar function to print
+ *                 the alphabet a - z
+ */
+
 void print_alphabet(void)
 {
-char letter;
-for (letter = 97; letter < 123; letter++)
-{
-	_putchar(letter);
-}
-_putchar('\n');
+	int ch;
+
+	for (ch = 'a'; ch <= 'z'; ++ch)
+		_putchar(ch);
+	_putchar('\n');
 }
