@@ -1,22 +1,22 @@
-nclude "main.h"
+#include "main.h"
 
 /**
- *  * flip_bits - returns the number of bits to flps
- *   * @n: first number
- *    * @m: second number
- *     *
- *      * Return: number of bits to flip
- *       */
+ *  * flip_bits - returns the number of bits you would
+ *   * need to flip to get from one number to another
+ *    * @n: number one.
+ *     * @m: number two.
+ *      *
+ *       * Return: number of bits.
+ *        */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xor_result = n ^ m;
-	unsigned int count = 0;
+	unsigned int nbits;
 
-	while (xor_result)
+	for (nbits = 0; n || m; n >>= 1, m >>= 1)
 	{
-		count += xor_result & 1;
-		xor_result >>= 1;
+		if ((n & 1) != (m & 1))
+			nbits++;
 	}
 
-	return (count);
+	return (nbits);
 }
